@@ -54,6 +54,12 @@ input {
         path => ["/data/logs/dial_graph_event_mw.log"]
         sincedb_path => "/home/learning/logstash-6.8.21/.sincedb_dial_graph_event_mw"
     }
+    file {
+        type => "graph_event"
+        start_position =>"beginning"
+        path => ["/data/logs/learning_graph_event_neo4j.log"]
+        sincedb_path => "/home/learning/logstash-6.8.21/.sincedb_learning_graph_event_neo4j"
+    }    
 }
 
 filter {
